@@ -1,0 +1,12 @@
+cherrypy==18.8.0  # CherryPy web framework
+jinja2==3.0.1     # Template engine
+mock==0.5.0       #Mock for GPIO Emulation
+
+To run automatically on Pi boot, follow these instructions:
+1. Open terminal
+2. Open the crontab editor by running the following command in the terminal: "crontab -e"
+3. Add the following line at the end of the crontab file: "@reboot sleep 30 && /usr/bin/python3 /path/to/your/script.py"
+(replace "/path/to/your/script.py" with the actual path to the script.
+4. Save the file (Ctrl + o) and exit.
+
+Now it should automatically run on Pi boot (Wait 2 minutes for system boot and sleep time).
